@@ -12,7 +12,8 @@ public class ScoreModifier : MonoBehaviour {
         {
             score++;
             scoreText.text = "Score: " + score;
-            Destroy(other.gameObject);
+            other.gameObject.tag = "Untagged";
+            other.gameObject.layer = 0;
         }
     }
 }
