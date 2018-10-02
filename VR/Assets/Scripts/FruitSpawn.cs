@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -23,5 +24,10 @@ public class FruitSpawn : MonoBehaviour {
                 Instantiate(fruits[fruitGroup], spawnPoints[spawnPoint].transform);
             }
         }
+    }
+
+    internal void isActiveAndEnabled(bool v)
+    {
+        throw new NotImplementedException();
     }
 }
