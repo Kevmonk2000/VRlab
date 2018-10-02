@@ -5,22 +5,30 @@ using UnityEngine.UI;
 
 public class Button : MonoBehaviour
 {
-    float timeLeft = 60.0f;
-    public Text timerLabel;
+    float timeLeft = 60f;
+    public TextMesh countText;
 
     private void Start()
     {
-        
+        //timeLeft -= Time.deltaTime;
+
+        //countText.text = "Time Left: " + timeLeft.ToString();
+    }
+    private void Update()
+    {
+        //timeLeft -= Time.deltaTime;
+        //countText.text = "Time Left: " + timeLeft.ToString();
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Player")
+        if (other.gameObject.CompareTag("Player"))
         {
             this.GetComponent<FruitSpawn>().isActiveAndEnabled(true);
             timeLeft -= Time.deltaTime;
-            
-            
+
+            countText.text = "Time Left: " + timeLeft.ToString();
+
         }
     }
 
