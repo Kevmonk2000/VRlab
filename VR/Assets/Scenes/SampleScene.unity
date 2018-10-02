@@ -1999,7 +1999,7 @@ MonoBehaviour:
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 1
+  m_isInputParsingRequired: 0
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -3586,7 +3586,7 @@ MonoBehaviour:
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 1
+  m_isInputParsingRequired: 0
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -4055,6 +4055,7 @@ GameObject:
   - component: {fileID: 1623385418}
   - component: {fileID: 1623385417}
   - component: {fileID: 1623385416}
+  - component: {fileID: 1623385420}
   m_Layer: 10
   m_Name: Button1Sphere
   m_TagString: Untagged
@@ -4130,6 +4131,47 @@ Transform:
   m_Father: {fileID: 1037602663}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1623385420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1623385415}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec1b0585be1f1f8499075745b1bce831, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPoints:
+  - {fileID: 228977587}
+  - {fileID: 249878415}
+  - {fileID: 499957838}
+  - {fileID: 1539502846}
+  - {fileID: 1385377989}
+  - {fileID: 990189527}
+  - {fileID: 1803925945}
+  - {fileID: 1939822841}
+  - {fileID: 1548134205}
+  - {fileID: 747609069}
+  - {fileID: 1491602766}
+  - {fileID: 149217886}
+  - {fileID: 142547153}
+  - {fileID: 1625464352}
+  - {fileID: 1053671998}
+  - {fileID: 1134063728}
+  - {fileID: 51212050}
+  - {fileID: 1281512061}
+  - {fileID: 922315311}
+  - {fileID: 2093453913}
+  fruits:
+  - {fileID: 1829371231341652, guid: 426b44a7575f71e479fab4f4e8431989, type: 2}
+  - {fileID: 1802840387486672, guid: 8f38e57a49b1c844081ad6bb3c553f13, type: 2}
+  - {fileID: 1638444836145330, guid: 031f4f4b1f7d8b7489da0919e18ceac3, type: 2}
+  - {fileID: 1541859410316496, guid: 4fe5a7bcbee1651418ea031a87ff53e4, type: 2}
+  - {fileID: 1763817136346132, guid: 0f3575c567ebe8241a4a6ad511fd7017, type: 2}
+  - {fileID: 1724972533694550, guid: 63e523ab5d9ce7348b431ae1d689a54d, type: 2}
+  fruitPerBatch: 5
+  spawnDiff: 10
 --- !u!1 &1625464352
 GameObject:
   m_ObjectHideFlags: 0
@@ -4817,7 +4859,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1992768744}
-  - component: {fileID: 1992768745}
   m_Layer: 0
   m_Name: Spawn Points
   m_TagString: Untagged
@@ -4858,47 +4899,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1992768745
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1992768743}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec1b0585be1f1f8499075745b1bce831, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnPoints:
-  - {fileID: 228977587}
-  - {fileID: 249878415}
-  - {fileID: 499957838}
-  - {fileID: 1539502846}
-  - {fileID: 1385377989}
-  - {fileID: 990189527}
-  - {fileID: 1803925945}
-  - {fileID: 1939822841}
-  - {fileID: 1548134205}
-  - {fileID: 747609069}
-  - {fileID: 1491602766}
-  - {fileID: 149217886}
-  - {fileID: 142547153}
-  - {fileID: 1625464352}
-  - {fileID: 1053671998}
-  - {fileID: 1134063728}
-  - {fileID: 51212050}
-  - {fileID: 1281512061}
-  - {fileID: 922315311}
-  - {fileID: 2093453913}
-  fruits:
-  - {fileID: 1829371231341652, guid: 426b44a7575f71e479fab4f4e8431989, type: 2}
-  - {fileID: 1802840387486672, guid: 8f38e57a49b1c844081ad6bb3c553f13, type: 2}
-  - {fileID: 1638444836145330, guid: 031f4f4b1f7d8b7489da0919e18ceac3, type: 2}
-  - {fileID: 1541859410316496, guid: 4fe5a7bcbee1651418ea031a87ff53e4, type: 2}
-  - {fileID: 1763817136346132, guid: 0f3575c567ebe8241a4a6ad511fd7017, type: 2}
-  - {fileID: 1724972533694550, guid: 63e523ab5d9ce7348b431ae1d689a54d, type: 2}
-  fruitPerBatch: 5
-  spawnDiff: 10
 --- !u!1 &2021674939
 GameObject:
   m_ObjectHideFlags: 0
