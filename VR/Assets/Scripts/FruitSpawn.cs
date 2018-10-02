@@ -8,6 +8,10 @@ public class FruitSpawn : MonoBehaviour {
     public int fruitPerBatch;
     public int spawnDiff;
 
+    void Start () {
+		
+	}
+
     public void spawnFruit(GameObject[] fruits, int spawnPoint) {
         for (int i = 0; i < spawnPoints.Length; i++)
         {
