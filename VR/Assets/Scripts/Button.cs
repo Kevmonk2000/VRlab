@@ -6,18 +6,29 @@ using TMPro;
 
 public class Button : MonoBehaviour
 {
-    float timeLeft = 120f;
+    float timeLeft;
     public GameObject countText;
-    bool lol = false;
+    bool startHit = false;
 
     private void Start()
     {
-  
+        timeLeft = 120f;
     }
+
     private void Update()
     {
+        if(timeLeft < 0)
+        {
+            startHit = false;
+            GameObject[] gameObjects = GameObject.FindGameObjectsWithTag("fruit");
+
+            for(int i = 0; i < gameObjects.Length; i++)
+            {
+                Destroy(gameObjects[i]);
+            }
+        }
         
-        if (lol == true)
+        if (startHit == true)
         {
             timeLeft -= Time.deltaTime;
             countText.GetComponent<TextMeshProUGUI>().SetText("Time Left: " + Mathf.Floor(timeLeft).ToString());
@@ -29,12 +40,9 @@ public class Button : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            lol = true;
-
+            startHit = true;
+            timeLeft = 120f;
             this.GetComponent<FruitSpawn>().isActiveAndEnabled(true);
-
         }
     }
-    
-
 }
