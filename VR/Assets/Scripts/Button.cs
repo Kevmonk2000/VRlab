@@ -22,8 +22,9 @@ public class Button : MonoBehaviour
         {
             startHit = false;
             GameObject[] gameObjects = GameObject.FindGameObjectsWithTag("Fruit");
+            countText.GetComponent<TextMeshProUGUI>().SetText("Time Left: " + 0);
 
-            for(int i = 0; i < gameObjects.Length; i++)
+            for (int i = 0; i < gameObjects.Length; i++)
             {
                 Destroy(gameObjects[i]);
             }
