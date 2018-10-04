@@ -4413,6 +4413,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   countText: {fileID: 79301227}
+  scoreText: {fileID: 1265312209}
 --- !u!54 &1623385422
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -8,6 +8,7 @@ public class Button : MonoBehaviour
 {
     float timeLeft;
     public GameObject countText;
+    public GameObject scoreText;
     bool startHit = false;
     float startTime = 10f;
 
@@ -45,6 +46,7 @@ public class Button : MonoBehaviour
             startHit = true;
             timeLeft = startTime;
             this.GetComponent<FruitSpawn>().isActiveAndEnabled(true);
+            scoreText.GetComponent<TextMeshProUGUI>().SetText("Score: " + 0);
         }
     }
 }
