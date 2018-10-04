@@ -12,7 +12,7 @@ public class Button : MonoBehaviour
 
     private void Start()
     {
-        timeLeft = 120f;
+        timeLeft = 10f;
     }
 
     private void Update()
@@ -41,7 +41,7 @@ public class Button : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             startHit = true;
-            timeLeft = 120f;
+            timeLeft = 10f;
             this.GetComponent<FruitSpawn>().isActiveAndEnabled(true);
         }
     }
