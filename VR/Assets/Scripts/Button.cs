@@ -9,10 +9,11 @@ public class Button : MonoBehaviour
     float timeLeft;
     public GameObject countText;
     bool startHit = false;
+    float startTime = 10f;
 
     private void Start()
     {
-        timeLeft = 10f;
+        timeLeft = startTime;
     }
 
     private void Update()
@@ -41,7 +42,7 @@ public class Button : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             startHit = true;
-            timeLeft = 10f;
+            timeLeft = startTime;
             this.GetComponent<FruitSpawn>().isActiveAndEnabled(true);
         }
     }
