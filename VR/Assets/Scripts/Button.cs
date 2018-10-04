@@ -5,8 +5,9 @@ using UnityEngine.UI;
 
 public class Button : MonoBehaviour
 {
-    float timeLeft = 60f;
+    float timeLeft = 120f;
     public TextMesh countText;
+    bool lol = false;
 
     private void Start()
     {
@@ -16,7 +17,12 @@ public class Button : MonoBehaviour
     }
     private void Update()
     {
-        //timeLeft -= Time.deltaTime;
+        
+        if (lol == true)
+        {
+            timeLeft -= Time.deltaTime;
+            countText.text = "Time Left: " +Mathf.Floor(timeLeft).ToString();
+        }
         //countText.text = "Time Left: " + timeLeft.ToString();
     }
 
@@ -24,13 +30,19 @@ public class Button : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            this.GetComponent<FruitSpawn>().isActiveAndEnabled(true);
-            timeLeft -= Time.deltaTime;
+            if (lol == false)
+            {
+                this.GetComponent<FruitSpawn>().isActiveAndEnabled(true);
+            }
 
-            countText.text = "Time Left: " + timeLeft.ToString();
+
+            lol = true;
+            //timeLeft = 120f;
+
+
 
         }
     }
-
+    
 
 }
