@@ -10,7 +10,7 @@ public class Button : MonoBehaviour
     public GameObject countText;
     public GameObject scoreText;
     bool startHit = false;
-    float startTime = 10f;
+    float startTime = 120f;
 
     private void Start()
     {
