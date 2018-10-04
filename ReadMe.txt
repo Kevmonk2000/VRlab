@@ -11,3 +11,4 @@ The right joystick turns your head.
 The triggers on the controlers grab fruit.
 Time Limit: 120 seconds
 Game Ends: Fruit Despawns
+Start: Hit start orb. To Restart Hit start orb
