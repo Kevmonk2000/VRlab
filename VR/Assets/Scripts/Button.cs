@@ -20,7 +20,7 @@ public class Button : MonoBehaviour
         if(timeLeft < 0)
         {
             startHit = false;
-            GameObject[] gameObjects = GameObject.FindGameObjectsWithTag("fruit");
+            GameObject[] gameObjects = GameObject.FindGameObjectsWithTag("Fruit");
 
             for(int i = 0; i < gameObjects.Length; i++)
             {
