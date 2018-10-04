@@ -1,8 +1,8 @@
 Script File: ReamMeFile
 Team: Kevin Morency, Brian Sotherden
 Breakdown:
-Kevin: Made VR movement and interactions and button interactions and working hands
-Brian: Made the scene and Time and Score and Spawning of Fruit
+Kevin: Made VR movement and interactions and button interactions and working hands (45%)
+Brian: Made the scene and Time and Score and Spawning of Fruit (55%)
 Quirks: Throwing is not as strong as it should be
 Goal of Minigame: Collect the fruit and put it into the basket to get the highest score
 Controls: 
