@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Button : MonoBehaviour
 {
     float timeLeft = 120f;
-    public TextMesh countText;
+    public GameObject countText;
     bool lol = false;
 
     private void Start()
@@ -19,7 +20,7 @@ public class Button : MonoBehaviour
         if (lol == true)
         {
             timeLeft -= Time.deltaTime;
-            countText.text = "Time Left: " +Mathf.Floor(timeLeft).ToString();
+            countText.GetComponent<TextMeshProUGUI>().SetText("Time Left: " + Mathf.Floor(timeLeft).ToString());
         }
         
     }

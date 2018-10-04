@@ -1,9 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class ScoreModifier : MonoBehaviour {
-    public TextMesh scoreText;
+    public GameObject scoreText;
     private int score = 0;
 
     private void OnTriggerEnter(Collider other)
@@ -11,7 +12,7 @@ public class ScoreModifier : MonoBehaviour {
         if(other.tag == "Fruit")
         {
             score++;
-            scoreText.text = "Score: " + score;
+            scoreText.GetComponent<TextMeshProUGUI>().SetText("Score: " + score);
             other.gameObject.tag = "Untagged";
             other.gameObject.layer = 0;
         }
