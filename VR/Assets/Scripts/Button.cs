@@ -43,7 +43,7 @@ public class Button : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            scoreText.GetComponent<TextMeshProUGUI>().SetText("Score: " + 0)
+            scoreText.GetComponent<TextMeshProUGUI>().SetText("Score: " + 0);
             startHit = true;
             timeLeft = startTime;
             this.GetComponent<FruitSpawn>().isActiveAndEnabled(true);;
