@@ -10,4 +10,4 @@ The left joystick Moves you around.
 The right joystick turns your head. 
 The triggers on the controlers grab fruit.
 Time Limit: 120 seconds
-Game Ends: You stop Moving
+Game Ends: Fruit Despawns
